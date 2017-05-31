@@ -3,8 +3,8 @@
 Priority  Estimate  Sprint  User Type   Story                              Member   Status
 ========  ========  ======  =========   ========================           ====     ======
 1         1         1       Developer   Order robot hardware               Shawn    done
-2
-3
-4
+2         1         1       Developer   Order sensors                      Shawn    pending
+3         3         1       Developer   Assemble robot w/ sensors          All      pending
+4         3         1       Developer   Establish forward movement         All      pending
 5
 6
