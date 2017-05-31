@@ -17,6 +17,8 @@ Unlike The: Other competing robots that only offer remote control usage. The aMA
 
 Our Product Offers:
 
+Remote control usage, autonomous maze solving capabilites, small form factor, Linux operating systm, ability to reprogram to do anything the user wants and much more.
+
 Hello I am testing the README
 
 Me too.
