@@ -5,6 +5,7 @@ Priority  Estimate  Sprint  User Type   Story                              Membe
 1         1         1       Developer   Order robot hardware               Shawn    done
 2         1         1       Developer   Order sensors                      Shawn    pending
 3         3         1       Developer   Assemble robot w/ sensors          All      pending
-4         3         1       Developer   Establish forward movement         All      pending
-5
-6
+4         1         1       Developer   Connect to Control Panel Server    All      pending        
+5         3         1       Developer   Establish forward movement         All      pending
+6         
+7
