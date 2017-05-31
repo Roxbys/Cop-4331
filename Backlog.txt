@@ -1,8 +1,8 @@
 //Backlog
 
-Priority  Estimate  Sprint  User Type   Story                                          Status
-========  ========  ======  =========   ========================                       ======
-1         1         1       Developer   Order robot hardware                           done
+Priority  Estimate  Sprint  User Type   Story                              Member   Status
+========  ========  ======  =========   ========================           ====     ======
+1         1         1       Developer   Order robot hardware               Shawn    done
 2
 3
 4
