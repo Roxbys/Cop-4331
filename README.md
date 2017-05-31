@@ -3,12 +3,15 @@ Maze Rover
 
 For:  Robotics enthusiasts
 
-Who/That: For robotics enthusiasts that find enjoyment in watching robots trace through physical mazes.
+Who/That: 
+For robotics enthusiasts that find enjoyment in watching robots trace through physical mazes.
 This Robot will help the user solve complex mazes and will avoid the walls of the maze. 
 
-The Product: aMAZEbot
+The Product: 
+aMAZEbot
 
-That Leads To… (main advantage, appealing reason for purchase)
+That Leads To: 
+For robotics enthusiasts that find enjoyment in watching robots trace through physical mazes, aMAZEbot demonstrates advanced reasoning that leads to faster completion of complex mazes. Unlike products already on the market, aMAZEbot has the ability to go fully autonomous.
 Unlike The… (principal competing alternatives)
 Our Product Offers… (describe main differentiation)
 
