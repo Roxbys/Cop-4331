@@ -15,6 +15,9 @@ For robotics enthusiasts that find enjoyment in watching robots trace through ph
 Unlike The… (principal competing alternatives)
 Our Product Offers… (describe main differentiation)
 
+Unlike The:
+
+Our Product Offers:
 
 Hello I am testing the README
 
