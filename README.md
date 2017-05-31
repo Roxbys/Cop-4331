@@ -12,10 +12,8 @@ aMAZEbot
 
 That Leads To: 
 For robotics enthusiasts that find enjoyment in watching robots trace through physical mazes, aMAZEbot demonstrates advanced reasoning that leads to faster completion of complex mazes. Unlike products already on the market, aMAZEbot has the ability to go fully autonomous.
-Unlike The… (principal competing alternatives)
-Our Product Offers… (describe main differentiation)
 
-Unlike The:
+Unlike The: Other competing robots that only offer remote control usage. The aMAZEbot provides the capability to be fully autonomous. 
 
 Our Product Offers:
 
