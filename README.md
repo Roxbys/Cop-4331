@@ -4,7 +4,7 @@ Maze Rover
 For:  Robotics enthusiasts
 
 Who/That: For robotics enthusiasts that find enjoyment in watching robots trace through physical mazes.
-This Robot will help the user solve complex mazes and will avoid running into obstacles.
+This Robot will help the user solve complex mazes and will avoid the walls of the maze. 
 
 The Product: aMAZEbot
 
