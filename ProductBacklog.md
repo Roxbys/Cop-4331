@@ -56,6 +56,9 @@
       <td>2</td><td>2</td><td>1</td><td>As a user, I want my device to be easily assembled so I don't have to spend a long time building it before using it</td><td>Completed</td>
   </tr>
 
+<tr>
+      <td>2</td><td>5</td><td>3</td><td>As a user, I want my device to be able to connect to the internet so I can control it remotely</td><td>Completed</td>
+  </tr>
 
 
 </table>
