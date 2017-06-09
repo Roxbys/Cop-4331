@@ -48,5 +48,10 @@
       <td>2</td><td>1</td><td>1</td><td>As a user, I want my device to accept standard store-bought batteries so I don't have to search for special batteries or keep track of a charger</td><td>Completed</td>
   </tr>
 
+  <tr>
+      <td>2</td><td>13</td><td>3</td><td>As a user, I want my device to be able to record it's movements so it can navigate mazes via backtracking</td><td>Not Completed</td>
+  </tr>
+
+
 
 </table>
