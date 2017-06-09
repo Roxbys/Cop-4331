@@ -33,7 +33,7 @@
   </tr>
   
   <tr>
-      <td>2</td><td>3</td><td>3</td><td>As a user, I want my device to be able to reset in case of failure so it doesn't become completely inoperable after executing invalid programs</td><td>Not Completed</td>
+      <td>2</td><td>2</td><td>3</td><td>As a user, I want my device to be able to be reset in case of failure so it doesn't become completely inoperable after executing invalid programs</td><td>Not Completed</td>
   </tr>
   
   <tr>
