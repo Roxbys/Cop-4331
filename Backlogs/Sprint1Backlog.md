@@ -25,11 +25,11 @@
   </tr>
   
   <tr>
-      <td>2</td><td>2</td><td>2</td><td>As a user, I want my device to be able to move in multiple directions so it isn't limited to straight paths</td><td>In Progress</td>
+      <td>2</td><td>2</td><td>1</td><td>As a user, I want my device to be able to move in multiple directions so it isn't limited to straight paths</td><td>In Progress</td>
   </tr>
   
   <tr>
-      <td>3</td><td>1</td><td>2</td><td>As a user, I want my device to make sounds so it can celebrate its accomplishments</td><td>In Progress</td>
+      <td>3</td><td>1</td><td>1</td><td>As a user, I want my device to make sounds so it can celebrate its accomplishments</td><td>In Progress</td>
   </tr>
   
   <tr>
