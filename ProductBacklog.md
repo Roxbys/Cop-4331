@@ -37,7 +37,7 @@
   </tr>
   
   <tr>
-      <td>2</td><td>5</td><td>3</td><td>As a user, I want my device to be able detect walls so it can avoid collisions</td><td>Not Completed</td>
+      <td>1</td><td>5</td><td>3</td><td>As a user, I want my device to be able detect walls so it can avoid collisions</td><td>Not Completed</td>
   </tr>
   
   <tr>
