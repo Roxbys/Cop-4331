@@ -4,6 +4,8 @@
 
 #include <Romi32U4.h>
 
+#define MAX_SPEED 400 
+
 Romi32U4Motors motors;
 Romi32U4ButtonA buttonA;
 Romi32U4ButtonC buttonC;
@@ -20,12 +22,21 @@ void setup()
 
 void loop()
 {
-  // Run both motors forward.
-  motors.setLeftSpeed(400);
-  motors.setRightSpeed(400);
+  // run both motors forward
+  for(int speed = 0; speed <= MAX_SPEED; speed += 5) 
+  {
+    motors.setLeftSpeed(speed);
+    motors.setRightSpeed(speed);
+    delay(5);
+  } 
   
   while(!buttonC.isPressed());
 
-  motors.setLeftSpeed(0);
-  motors.setRightSpeed(0);
+  // slow 'er down
+  for(int speed = MAX_SPEED; speed > 0 ; speed -= 5) 
+  {
+    motors.setLeftSpeed(speed);
+    motors.setRightSpeed(speed);
+    delay(5);
+  }
 }
