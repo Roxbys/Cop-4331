@@ -21,7 +21,7 @@
   </tr>
   
   <tr>
-  <td>1</td><td>2</td><td>1</td><td>As a user, I want my device assembled well enough to resist small collision so it doesn't fall apart if it crashes during movement</td><td>Completed</td>
+  <td>2</td><td>2</td><td>1</td><td>As a user, I want my device assembled well enough to resist small collision so it doesn't fall apart if it crashes during movement</td><td>Completed</td>
   </tr>
   
   <tr>
@@ -50,6 +50,10 @@
 
   <tr>
       <td>2</td><td>13</td><td>3</td><td>As a user, I want my device to be able to record it's movements so it can navigate mazes via backtracking</td><td>Not Completed</td>
+  </tr>
+
+  <tr>
+      <td>2</td><td>2</td><td>1</td><td>As a user, I want my device to be easily assembled so I don't have to spend a long time building it before using it</td><td>Completed</td>
   </tr>
 
 
