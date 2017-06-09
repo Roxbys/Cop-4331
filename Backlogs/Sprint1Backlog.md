@@ -35,5 +35,12 @@
       <td>2</td><td>2</td><td>As a user, I want my device to be able to reset in case of failure so it doesn't become completely inoperable after executing invalid programs</td><td>Completed</td>
   </tr>
  
+ <tr>
+      <td>2</td><td>1</td><td>As a user, I want my device to accept standard store-bought batteries so I don't have to search for special batteries or keep track of a charger</td><td>Completed</td>
+  </tr>
+
+  <tr>
+      <td>2</td><td>2</td><td>As a user, I want my device to be easily assembled so I don't have to spend a long time building it before using it</td><td>Completed</td>
+  </tr>
 
 </table>
