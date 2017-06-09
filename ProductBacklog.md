@@ -44,4 +44,9 @@
       <td>2</td><td>8</td><td>3</td><td>As a user, I want my device to be able to follow a wall to its right so it can navigate most mazes</td><td>Not Completed</td>
   </tr>
 
+  <tr>
+      <td>2</td><td>1</td><td>1</td><td>As a user, I want my device to accept standard store-bought batteries so I don't have to search for special batteries or keep track of a charger</td><td>Completed</td>
+  </tr>
+
+
 </table>
