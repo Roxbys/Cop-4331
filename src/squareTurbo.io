@@ -4,21 +4,32 @@
 Romi32U4Motors motors;
 Romi32U4ButtonA buttonA;
 Romi32U4ButtonC buttonC;
+int turnOff = 0;
 
 void setup()
 {
   buttonA.waitForButton();
-  motors.allowTurbo();
   delay(500);
 }
 
 void loop()
 {
-  while(!buttonC.isPressed()) 
+  while(!turnOff) 
   {
-    motors.setSpeeds(400,400);
+    for(int speed = 0; speed < 150; speed++)
+      motors.setSpeeds(speed, speed);
+      
+    turnOff = (turnOff == 1) ? turnOff : buttonC.isPressed();
+   
+    for(int speed = 150; speed > 0; speed--) 
+      motors.setSpeeds(speed, speed);
+      
+    turnOff = (turnOff == 1) ? turnOff : buttonC.isPressed();
+    
     delay(500);
     motors.setSpeeds(-50, 50);
-    delay(50);
+    delay(900);
+    
+    turnOff = (turnOff == 1) ? turnOff : buttonC.isPressed();
   }
 }
