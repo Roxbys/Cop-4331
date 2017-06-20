@@ -25,7 +25,7 @@
   </tr>
   
   <tr>
-      <td>2</td><td>2</td><td>As a user, I want my device to be able to move in multiple directions so it isn't limited to straight paths</td><td>Implement funtions using Arduino IDE</td><td>In Progress</td>
+      <td>2</td><td>2</td><td>As a user, I want my device to be able to move in multiple directions so it isn't limited to straight paths</td><td>Implement functions using Arduino IDE</td><td>In Progress</td>
   </tr>
   
   <tr>
@@ -41,7 +41,7 @@
   </tr>
 
   <tr>
-      <td>2</td><td>2</td><td>As a user, I want my device to be easily assembled so I don't have to spend a long time building it before using it</td><td>No assembly require, only battery insertion</td><td>Completed</td>
+      <td>2</td><td>2</td><td>As a user, I want my device to be easily assembled so I don't have to spend a long time building it before using it</td><td>No assembly required, only battery insertion</td><td>Completed</td>
   </tr>
 
 </table>
