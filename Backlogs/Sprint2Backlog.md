@@ -36,7 +36,7 @@
       <td>3</td><td>12</td><td>As a user, I want my robot to know that there exists no solution to a maze</td><td>Mapping algorithm</td>   <td>Not Started</td>
  </tr>
  <tr>
-      <td> </td>   <td> </td>   <td> </td>   <td> </td>   <td> </td>
+      <td>3</td> 12 <td>As a user, I want my robot to be able to dectect cycles in the maze</td>Daed-reckoning system <td>Not started</td>
  </tr>
  <tr>
       <td> </td>   <td> </td>   <td> </td>   <td> </td>   <td> </td>
