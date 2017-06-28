@@ -23,7 +23,7 @@ while (cancel == False):
   # totally guessing that this is how you reference button C
   cancel = (a_star.read_buttons())[2]
   
-  while ((g > r and g > b) and !cancel):
+  while ((g > r and g > b) and (cancel == False)):
   
     print('Color: red={0} green={1} blue={2} clear={3}'.format(r, g, b, c))
     lspeed = rspeed = 100
