@@ -18,7 +18,7 @@ lastDecision = 0
 # speeds of motors
 lspeed = rspeed = int(0)
 
-while (!cancel): 
+while (cancel == False): 
 
   # totally guessing that this is how you reference button C
   cancel = (a_star.read_buttons())[2]
@@ -32,10 +32,10 @@ while (!cancel):
     r, g, b, c = tcs.get_raw_data()
     cancel = (a_star.read_buttons())[2]
     
-  if(cancel):
+  if(cancel == True):
     break
   
-  while(!(g > r and g > b) and !cancel):
+  while(g < r or g < b) and (cancel == False)):
   
     lspeed, rspeed, lastDecision = adjustSpeed(lspeed, rspeed, lastDecision)
     a_star.motors(lspeed, rspeed)
