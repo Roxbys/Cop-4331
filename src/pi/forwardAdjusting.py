@@ -35,7 +35,7 @@ while (cancel == False):
   if(cancel == True):
     break
   
-  while(g < r or g < b) and (cancel == False)):
+  while((g < r or g < b) and (cancel == False)):
   
     lspeed, rspeed, lastDecision = adjustSpeed(lspeed, rspeed, lastDecision)
     a_star.motors(lspeed, rspeed)
