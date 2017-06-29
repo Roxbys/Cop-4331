@@ -51,6 +51,6 @@ tcs.set_interrupt(True)
 tcs.disable()
 
 def adjustSpeed(lspeed, rspeed, lastDecision)
-  retval = (lspeed - 50, rspeed) if lastDecision == 1 else (lspeed, rspeed - 50)
+  retval = (lspeed - 30, rspeed) if lastDecision == 1 else (lspeed, rspeed - 30)
   lastDecision = lastDecision ^ 0
   return (lspeed, rspeed, lastDecision)
