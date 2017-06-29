@@ -3,6 +3,7 @@
 from a_star import AStar
 import Adafruit_TCS34725
 import smbus
+import time
 
 a_star = AStar()
 tcs = Adafruit_TCS34725.TCS34725()
@@ -39,8 +40,7 @@ while (cancel == False):
   
     lspeed, rspeed, lastDecision = adjustSpeed(lspeed, rspeed, lastDecision)
     a_star.motors(lspeed, rspeed)
-    
-    #insert some delay here
+    time.sleep(.2)
     r, g, b, c = tcs.get_raw_data()
     cancel = (a_star.read_buttons())[2]
   
