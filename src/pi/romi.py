@@ -10,20 +10,22 @@ class Robot:
     self.nextSearchDirection = 0  # (left: 0, right: 1)
     self.veerSpeed = 50
     self.maxSpeed = 100
-    self.a_star = AStar()
+    self.aStar = AStar()
     self.tcs = Adafruit_TCS34725.TCS34725()
     
+  # check if currently reading green tape  
   def checkGreen(self):
     r, g, b, c = self.tcs.get_raw_data()
     self.isGreen = (g > r and g > b)
     return self.isGreen
   
+  # set motor speeds
   def motors(self, lspeed, rspeed):
-    self.a_star.motors(lspeed, rspeed)
-    
+    self.aStar.motors(lspeed, rspeed)
+  
   def goForward(self):
     self.motors(self.maxSpeed, self.maxSpeed)
-   
+
   def stop(self):
     self.motors(0, 0)
     
@@ -37,7 +39,44 @@ class Robot:
     return time.time()
   
   def playNotes(self):
-    self.a_star.play_notes("o4l16ceg>c8")
+    self.aStar.play_notes("o4l16ceg>c8")
+  
+  # turn leds on or off
+  def leds(self, red, yellow, green):
+    self.aStar.leds(red, yellow, green)
+    
+  def blinkRed(self):
+    time = self.getTime()
+    status = 1
+    while(self.getTime() - time < 5)
+      self.leds(status, 0, 0)
+      status = status ^ 1
+      time.sleep(.5)
+    # end while
+    
+  def giveUp(self):
+    self.playNotes()
+    self.motors(self.maxSpeed, self.maxSpeed * (-1))
+    self.blinkRed()
+    self.stop()
+    
+  def readAnalog(self):
+    return self.aStar.read_analog()
+  
+  def readBatteryMillivolts(self):
+    return self.aStar.read_battery_millivolts()
+  
+  def readButtons(self):
+    return self.aStar.read_buttons()
+    
+  def readEncoders(self):
+    return self.aStar.read_encoders()
+  
+  def printColorInfo(self):
+    r, g, b, c = self.tcs.get_raw_data()
+    temp = Adafruit_TCS34725.calculate_color_temperature(r, g, b)
+    lux = Adafruit_TCS34725.calculate_lux(r, g, b)
+    print('Color: r={0} g={1} b={2} temp={3} lux={4}'.format(r, g, b, temp, lux))
    
   # recalibrate the robot onto the path
   def calibrateDirection(self):
@@ -47,7 +86,7 @@ class Robot:
     calibrated = False
     
     while(not calibrated):
-      if((self.getTime() - totalSearchTime) >= maxSearchTime):
+      if(self.getTime() - totalSearchTime >= maxSearchTime):
         self.isLost = True
         break
       turnTime = self.getTime()
@@ -59,20 +98,20 @@ class Robot:
       # switch turn direction for next iteration 
       self.nextSearchDirection = self.nextSearchDirection ^ 1 
       # wait to see if direction was correct  
-      while((self.getTime() - turnTime) < maxTurnTime):
+      while(self.getTime() - turnTime < maxTurnTime):
         if(self.checkGreen()):
           calibrated = True
           break
       # end while
       maxTurnTime *= 2  # double max search time for next direction 
     # end while
-  # end calibrateDirection()
+  # end calibrateDirection()    
 # end Class Robot()
  
-    
+  
 def main():
     romi = Robot()
-    romi.tcs.set_interrupt(True)
+    romi.tcs.set_interrupt(False)
     
     while(not romi.isLost):
       if(romi.isGreen):
@@ -85,8 +124,7 @@ def main():
           romi.goForward()
         
     if(romi.isLost):
-        romi.playNotes
-        romi.stop()
+        romi.giveUp()
       
     romi.tcs.set_interrupt(True)
     romi.tcs.disable()
