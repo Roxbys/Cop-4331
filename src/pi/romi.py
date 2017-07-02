@@ -77,6 +77,19 @@ class Robot:
     temp = Adafruit_TCS34725.calculate_color_temperature(r, g, b)
     lux = Adafruit_TCS34725.calculate_lux(r, g, b)
     print('Color: r={0} g={1} b={2} temp={3} lux={4}'.format(r, g, b, temp, lux))
+    
+  def turnOffInterruptsRGB(self):
+    self.tcs.set_interrupt(False)
+  
+  def turnOnInterruptsRGB(self):
+    self.tcs.set_interrupt(True)
+  
+  # rgb sensor is enabled by default in the constructor method
+  def enableRGB(self):
+    self.tcs.enable()
+    
+  def disableRGB(self):
+    self.tcs.disable()
    
   # recalibrate the robot onto the path
   def calibrateDirection(self):
