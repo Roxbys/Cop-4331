@@ -107,26 +107,3 @@ class Robot:
     # end while
   # end calibrateDirection()    
 # end Class Robot()
- 
-  
-def main():
-    romi = Robot()
-    romi.tcs.set_interrupt(False)
-    
-    while(not romi.isLost):
-      if(romi.isGreen):
-        pass
-      elif(romi.checkGreen()):
-        romi.goForward()
-      else:
-        romi.calibrateDirection()
-        if(romi.isGreen):
-          romi.goForward()
-        
-    if(romi.isLost):
-        romi.giveUp()
-      
-    romi.tcs.set_interrupt(True)
-    romi.tcs.disable()
-
-if __name__ == "__main__": main()
