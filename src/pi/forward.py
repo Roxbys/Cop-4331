@@ -1,11 +1,10 @@
 # simple test that utilizes the romi class
 # move forward on green until lost
-
 from romi import *
 
 def main():
     romi = Robot()
-    romi.tcs.set_interrupt(False)
+    romi.turnOffInterruptsRGB()
     
     while(not romi.isLost):
       if(romi.isGreen):
@@ -16,11 +15,13 @@ def main():
         romi.calibrateDirection()
         if(romi.isGreen):
           romi.goForward()
+    # end while
         
     if(romi.isLost):
         romi.giveUp()
       
-    romi.tcs.set_interrupt(True)
-    romi.tcs.disable()
-
+    romi.turnOnInterruptsRGB()
+    romi.disableRGB()
+#end main
+    
 if __name__ == "__main__": main()
