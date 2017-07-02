@@ -90,6 +90,17 @@ class Robot:
     
   def disableRGB(self):
     self.tcs.disable()
+    
+  def followPath(self):
+    if(romi.isGreen):
+        pass
+      elif(romi.checkGreen()):
+        romi.goForward()
+      else:
+        romi.calibrateDirection()
+        if(romi.isGreen):
+          romi.goForward()
+  # end followPath()
    
   # recalibrate the robot onto the path
   def calibrateDirection(self):
