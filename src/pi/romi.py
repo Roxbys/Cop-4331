@@ -94,12 +94,12 @@ class Robot:
   def followPath(self):
     if(romi.isGreen):
         pass
-      elif(romi.checkGreen()):
+    elif(romi.checkGreen()):
         romi.goForward()
-      else:
-        romi.calibrateDirection()
-        if(romi.isGreen):
-          romi.goForward()
+    else:
+      romi.calibrateDirection()
+      if(romi.isGreen):
+        romi.goForward()
   # end followPath()
    
   # recalibrate the robot onto the path
