@@ -7,15 +7,7 @@ def main():
     romi.turnOffInterruptsRGB()
     
     while(not romi.isLost):
-      if(romi.isGreen):
-        pass
-      elif(romi.checkGreen()):
-        romi.goForward()
-      else:
-        romi.calibrateDirection()
-        if(romi.isGreen):
-          romi.goForward()
-    # end while
+      romi.followPath()
         
     if(romi.isLost):
         romi.giveUp()
