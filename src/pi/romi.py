@@ -48,7 +48,7 @@ class Robot:
   def blinkRed(self):
     time = self.getTime()
     status = 1
-    while(self.getTime() - time < 5)
+    while(self.getTime() - time < 5:
       self.leds(status, 0, 0)
       status = status ^ 1
       time.sleep(.5)
