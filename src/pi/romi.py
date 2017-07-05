@@ -92,14 +92,14 @@ class Robot:
     self.tcs.disable()
     
   def followPath(self):
-    if(romi.isGreen):
+    if(self.isGreen):
         pass
-    elif(romi.checkGreen()):
-        romi.goForward()
+    elif(self.checkGreen()):
+        self.goForward()
     else:
-      romi.calibrateDirection()
-      if(romi.isGreen):
-        romi.goForward()
+      self.calibrateDirection()
+      if(self.isGreen):
+        self.goForward()
   # end followPath()
    
   # recalibrate the robot onto the path
