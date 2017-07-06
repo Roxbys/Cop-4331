@@ -6,18 +6,18 @@ import time
 class Robot:
   def __init__(self):
     self.isLost = False
-    self.isGreen = False
     self.nextSearchDirection = 0  # (left: 0, right: 1)
-    self.veerSpeed = 50
-    self.maxSpeed = 100
+    self.veerSpeed = 40
+    self.maxSpeed = 200
     self.aStar = AStar()
     self.tcs = Adafruit_TCS34725.TCS34725()
-    
+    self.initialLeftCount = self.aStar.read_encoders()[0]
+    self.initialRightCount = self.aStar.read_encoders()[1]
+  
   # check if currently reading green tape  
   def checkGreen(self):
     r, g, b, c = self.tcs.get_raw_data()
-    self.isGreen = (g > r and g > b)
-    return self.isGreen
+    return (g > r and g > b)
   
   # set motor speeds
   def motors(self, lspeed, rspeed):
@@ -45,21 +45,6 @@ class Robot:
   def leds(self, red, yellow, green):
     self.aStar.leds(red, yellow, green)
     
-  def blinkRed(self):
-    time = self.getTime()
-    status = 1
-    while(self.getTime() - time < 5:
-      self.leds(status, 0, 0)
-      status = status ^ 1
-      time.sleep(.5)
-    # end while
-    
-  def giveUp(self):
-    self.playNotes()
-    self.motors(self.maxSpeed, self.maxSpeed * (-1))
-    self.blinkRed()
-    self.stop()
-    
   def readAnalog(self):
     return self.aStar.read_analog()
   
@@ -70,7 +55,8 @@ class Robot:
     return self.aStar.read_buttons()
     
   def readEncoders(self):
-    return self.aStar.read_encoders()
+    encoders = self.aStar.read_encoders()
+    return (encoders[0] - self.initialLeftCount, encoders[1] - self.initialRightCount)
   
   def printColorInfo(self):
     r, g, b, c = self.tcs.get_raw_data()
@@ -90,30 +76,33 @@ class Robot:
     
   def disableRGB(self):
     self.tcs.disable()
+
+  def turn90Left(self):
+    initEncoders = self.readEncoders()
+    while(    self.readEncoders()[0] > initEncoders[0] - 744
+          and self.readEncoders()[1] < initEncoders[1] + 744):
+      self.motors(self.maxSpeed * (-1), self.maxSpeed)
+    self.stop()
+
+  def turn90Right(self):
+    initEncoders = self.readEncoders()
+    while(    self.readEncoders()[1] > initEncoders[1] - 744
+          and self.readEncoders()[0] < initEncoders[0] + 744):
+      self.motors(self.maxSpeed, self.maxSpeed * (-1))
+    self.stop()
     
-  def followPath(self):
-    if(self.isGreen):
-        pass
-    elif(self.checkGreen()):
-        self.goForward()
-    else:
-      self.calibrateDirection()
-      if(self.isGreen):
-        self.goForward()
-  # end followPath()
-   
+  def calibrate(self):
+    while(self.checkGreen() == False):
+      for x in range(100, -20, -1):
+        self.motors(100 if x+40>100 else x+40,x)
+      
+      
   # recalibrate the robot onto the path
   def calibrateDirection(self):
-    maxTurnTime = 0.2
-    maxSearchTime = 5 
-    totalSearchTime = self.getTime()
     calibrated = False
+    turnAmount = 200 # initial encoder count
     
-    while(not calibrated):
-      if(self.getTime() - totalSearchTime >= maxSearchTime):
-        self.isLost = True
-        break
-      turnTime = self.getTime()
+    while(self.checkGreen() == False):
       # turn the robot one direction 
       if (self.nextSearchDirection == 0):
         self.veerLeft()
@@ -122,12 +111,13 @@ class Robot:
       # switch turn direction for next iteration 
       self.nextSearchDirection = self.nextSearchDirection ^ 1 
       # wait to see if direction was correct  
-      while(self.getTime() - turnTime < maxTurnTime):
+      while(self.readEncoders()[self.nextSearchDirection] < turnAmount):
         if(self.checkGreen()):
-          calibrated = True
           break
       # end while
-      maxTurnTime *= 2  # double max search time for next direction 
+      turnAmount *= 2  # double max search time for next direction 
     # end while
-  # end calibrateDirection()    
+  # end calibrateDirection()
+
+  
 # end Class Robot()
