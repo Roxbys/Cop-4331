@@ -90,7 +90,19 @@ class Robot:
           and self.readEncoders()[0] < initEncoders[0] + 744):
       self.motors(self.maxSpeed, self.maxSpeed * (-1))
     self.stop()
-    
+  
+  def goForward(self):
+    self.motors(self.maxSpeed, self.maxSpeed)
+    x = self.maxSpeed
+    if(self.readEncoders()[1] > self.readEncoders()[0])
+      while(self.readEncoders()[1]>self.readEncoders()[0])
+        self.motors(x--,self.maxSpeed)
+        self.sleep(.01)
+      x = self.maxSpeed
+      while(self.readEncoders()[1]>self.readEncoders()[0])
+        self.motors(self.maxSpeed,x--)
+        time.sleep(.01)
+
   def calibrate(self):
     while(self.checkGreen() == False):
       for x in range(100, -20, -1):
