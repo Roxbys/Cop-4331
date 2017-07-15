@@ -16,6 +16,8 @@ For robotics enthusiasts that find enjoyment in watching robots trace through ph
 
 [Moving Along a Straight Path](https://youtu.be/nuYBiyLRXo0 "Move Straight")
 
+[Traversing the Maze](https://youtu.be/-_1BNhiUyMM "Traversing the Maze")
+
 <h1>Backlogs</h1>
 
 [Product Backlog](https://github.com/Roxbys/Cop-4331/blob/master/Backlogs/ProductBacklog.md "Product Backlog")
