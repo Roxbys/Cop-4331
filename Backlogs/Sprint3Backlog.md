@@ -7,24 +7,21 @@
      <th>Design Element</th>
      <th>Status</th>
   </tr>
-  
-  
   <tr>
-      <td>1</td><td>5</td><td>As a user, I want my device to be able detect walls so it can avoid collisions</td><td>Implement rangefinding sensors</td><td>Not Completed</td>
-  </tr>
-  
-  <tr>
-      <td>2</td><td>8</td><td>As a user, I want my device to be able to follow a wall to its right so it can navigate most mazes</td><td>Track distance to right wall at all times, course correct as needed, and navigate obstructions</td><td>Not Completed</td>
-  </tr>
-
-
-  <tr>
-      <td>2</td><td>13</td><td>As a user, I want my device to be able to record it's movements so it can navigate mazes via backtracking</td><td>Implement dead-reckoning based on encoders, and record maze junctions</td><td>Not Completed</td>
-  </tr>
-
-<tr>
-      <td>2</td><td>5</td><td>As a user, I want my device to be able to connect to the internet so I can control it remotely</td><td>Hook up the Pi to the internet, and write a simple program to send commands to the Pi</td><td>Completed</td>
-  </tr>
+      <td>1</td><td>20</td><td>As a user, I want the robot to adjust for straight movement along a path</td><td>Set up the Raspberry Pi and RGB Sensor onto the control board, Overflow accounting in Encoders</td><td>Completed</td>
+ </tr> 
+  <td>1</td><td>15</td><td>As a user, I want to be able to be able to make turns based on custom maze designs</td><td>RGB Sensor, Tape implementation, Overflow accounting in Encoders</td><td>Completed</td>
+ </tr>
+ <tr>
+      <td>1</td><td>5</td><td>As a user, I want my robot to know how to detect deadends in my maze designs</td><td>RGB Sensor, Path Detection algorithm</td><td>Completed</td>
+ </tr>
+ 
+ <tr>
+      <td>1</td><td>5</td><td>As a user, I want my robot to know that there exists no solution to a maze</td><td>Backtracking algorithm</td><td>Completed</td>
+ </tr>
+ <tr>
+ <td>2</td><td>20</td><td>As a user, I want my robot to be able to detect cycles in the maze</td><td>Dead-reckoning system</td><td>Not Completed</td>
+ </tr>
 
  <tr>
       <td> </td>   <td> </td>   <td> </td>   <td> </td>   <td> </td>
