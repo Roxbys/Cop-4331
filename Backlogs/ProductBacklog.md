@@ -52,7 +52,7 @@
  </tr>
  
  <tr>
-      <td>1</td><td>6</td><td>2</td><td>As a user, I want to be able to control the robot remotely</td><td>Set up the Raspberry pi onto the control board, Web server implementation</td><td>Completed</td>
+      <td>1</td><td>5</td><td>2</td><td>As a user, I want to be able to control the robot remotely</td><td>Set up the Raspberry pi onto the control board, Web server implementation</td><td>Completed</td>
  </tr>
  <tr>
       <td>1</td><td>8</td><td>2</td><td>As a user, I want the robot to adjust for straight movement along a path</td><td>Set up the Raspberry Pi and RGB Sensor onto the control board, Overflow accounting in Encoders</td><td>Completed</td>
