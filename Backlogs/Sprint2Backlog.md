@@ -38,7 +38,7 @@
       <td>3</td><td>15</td><td>As a user, I want my robot to know that there exists no solution to a maze</td><td>Mapping algorithm</td>   <td>Not Started</td>
  </tr>
  <tr>
- <td>3</td><td>12</td><td>As a user, I want my robot to be able to dectect cycles in the maze</td><td>Dead-reckoning system</td><td>Not Started</td>
+ <td>3</td><td>12</td><td>As a user, I want my robot to be able to detect cycles in the maze</td><td>Dead-reckoning system</td><td>Not Started</td>
  </tr>
  
 </table>
