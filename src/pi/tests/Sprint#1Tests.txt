@@ -1,0 +1,38 @@
+Descriptive Sprint #1 Tests
+
+1. As a user, I prefer my entertainment to include physical hardware so I can add functionality later.
+
+Test: Solder color sensor onto the Romi 32u4 arduino board, verify communication of data through Raspberry Pi GPIO and I2C communication ports utilizing RGB sensor libraries.  (completed)
+
+2. As a user, I want my device to power on so it can perform mechanical movement.
+
+Test: Plug usb power into arduino board and verify that the Raspberry Pi receives sufficient power to control motors.  (completed)
+
+3. As a user, I want my device to include wheels so it can traverse obstacles quickly.
+
+Test: Verify soldered connection of wheels to arduino board.  Run wheel speed tests on both the left and right wheels in the ranges of (-400, 400).  (completed)
+
+4. As a user, I want my device asssembled well enough to resist small collisions so it doesn't fall apart if it crashes during movement.
+
+Test: Run 5 collision tests at full forward speed and full reverse speed.  Verify attached components sustained zero damage. (completed)
+
+5. As a user, I want my device to be able to move in multiple directions so it isn't limited to straight paths. 
+
+Test: Created test functions to run solely on the arduino hardware that checks whether the robot can make circular paths, square paths, and full rotations. Refer to src content (completed)
+
+6. As a user, I want my device to be able to make sounds so it can celebrate its accomplishments. 
+
+Test: Create a method that implements the play sounds method of the arduino slave library.  Verify we can instantiate an object of our Robot class and play a sound through the buzzer on the arduino board.  (completed)
+
+7. As a user, I want my device to be able to reset in case of failure so it doesn't become completely inoperable after executing invalid programs.
+
+Test: Run valid and invalid programs on arduino board, if it becomes unresponsive or behaves irratically test the reset button on the arduino board and verify whether it is able to accept new instructions.
+(completed)
+
+8. As a user, I want my device to accept standard store-bought batteries so I don't have to search for special batteries or keep track of a charger.
+
+Test: Purchase rechargeable batteries from store.  Unplug usb power and verify battery power is sufficient to run wheels and execute programs. Reverify millivolt levels after the batteries have been fully recharged after a complete drain by using the arduino libraries (completed)
+
+9. As a user, I want my device to be easily assembled so I don't have to spend a long time building it before using it. 
+
+Test: Verify constitution of robot is sufficient for preassembly. Refer to collision results and resilience in all previous tests. Ensure the possibility that battery insertion is the only needed assembly if sold. (completed)
