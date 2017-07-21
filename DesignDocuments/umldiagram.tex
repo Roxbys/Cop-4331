@@ -1,0 +1,124 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{listings}
+\usepackage{fancyvrb}
+\usepackage{geometry}
+\usepackage{../tikz-uml}
+\usetikzlibrary{positioning}
+\usepackage{atbegshi}
+
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+\geometry{paperwidth=420mm, paperheight=420mm, left=40pt, top=40pt, textwidth=280pt, marginparsep=20pt, marginparwidth=100pt, textheight=16263pt, footskip=40pt}
+
+\textwidth 15cm
+\textheight 20cm
+\hoffset=5cm
+\voffset=5cm
+
+\sloppy
+\hyphenpenalty 10000000
+\pagenumbering{gobble}
+\date{}
+\title{}
+\author{}
+
+\lstdefinelanguage{tikzuml}{language=[LaTeX]TeX, classoffset=0, morekeywords={umlbasiccomponent, umlprovidedinterface, umlrequiredinterface, umldelegateconnector, umlassemblyconnector, umlVHVassemblyconnector, umlHVHassemblyconnector, umlnote, umlusecase, umlactor, umlinherit, umlassoc, umlVHextend, umlinclude, umlstateinitial, umlbasicstate, umltrans, umlstatefinal, umlVHtrans, umlHVtrans, umldatabase, umlmulti, umlobject, umlfpart, umlcreatecall, umlclass, umlvirt, umlunicompo, umlimport, umlaggreg}, keywordstyle=\color{DarkBlue}, classoffset=1, morekeywords={umlcomponent, umlsystem, umlstate, umlseqdiag, umlcall, umlcallself, umlfragment, umlpackage}, keywordstyle=\color{DarkRed}, classoffset=0,  sensitive=true, morecomment=[l]{\%}}
+
+\begin{document}
+	
+	\maketitle
+	
+	\medskip
+	\lstset{breaklines=true, frame=trBL, language=tikzuml}
+	
+	\begin{SaveVerbatim}{toto}
+		Je suis une note
+		qui concerne la 
+		relation d'import
+	\end{SaveVerbatim}
+	
+	\begin{center}
+			\begin{tikzpicture}[scale = 1.2,transform shape]
+				\begin{umlpackage}{aMAZEbot UML Diagram}
+					\umlclass [y=8,x=6]{AStar}{
+						+bus:Object\\
+						+read$\textunderscore$unpack(address, size, format):Struct\\
+						+write$\textunderscore$pack(address, format, *Integer):void\\
+						+leds(red, yellow, green):void\\
+						+play$\textunderscore$notes(notes):void\\
+						+motors(left,right):void\\
+						+read$\textunderscore$buttons():Struct\\
+						+read$\textunderscore$battery$\textunderscore$millivolts():Struct\\
+						+read$\textunderscore$analog():Struct\\
+						+read$\textunderscore$encoders():Struct\\
+						+test$\textunderscore$read8():void\\
+						+tes$\textunderscore$write8():void\\
+					}{This class is the AStar library.}
+					\umlclass[y=18,x=6]{Adafruit TCS}{
+						-get$\textunderscore$raw$\textunderscore$data():List\\
+						-calculate$\textunderscore$color$\textunderscore$tempurature():Double\\
+						-calculate$\textunderscore$lux():Double\\
+					}{This is the the class for the color sensor on the front\\
+					of the robot}
+					\umlclass [y=11,x=18]{Robot}{
+						+initialEncoderInfo: Integer\\
+						+forwardDistance: Integer\\					
+						+offset:Integer\\
+						+maxSpeed:Integer\\
+						+initalLeftCount:Integer\\
+						+initalRightCount:Integer\\
+						+mazeSolved:boolean\\
+						+directionFacing: String\\
+						+aStar:Object\\
+						+tcs:Object\\
+						+checkLine():void\\
+						+div():Double\\
+						+mult():Double\\
+						+getColorAverage(): List\\
+						+checkGreen(): boolean\\
+						+checkRed(): boolean\\
+						+checkPurple(): boolean\\
+						+getColors:Tuple\\
+						+motors(Double,Double): void\\
+						+goForward():void\\
+						+stop():void\\
+						+readEncoder():List\\
+						+printColorInfo():void\\
+						+turnOffInteruptsRGB():void\\
+						+turnOnInteruptsRGB():void\\
+						+enableRGB():void\\
+						+disableRGB():void\\
+						+calibrateTwo():void\\
+						+turnConunts(direction, counts):void\\
+						+turn90Left():void\\
+						+turn90Right():void\\
+						+goForwardtwo(offset):void\\
+						+zeroEncoders():List
+						+updateEncoders(Integer):List\\
+						+sweep(String, Integer):boolean\\
+						+sweepForGreen(Integer):boolean\\
+						+getValidPaths():List\\
+						+adjustIntersection():void\\
+						+calculateForwardDistance(Double):Double\\
+						+calculatePosition(String,String,Double):List\\
+						+directionFacingAfterTurn(String,String):List\\
+						+turn():void\\
+						+goToPreviousIntersection():void\\
+						-completeMaze(List):void
+					}{This class covers all of the main functionality of the robot\\}
+				\end{umlpackage}
+				
+				\umlcompo[geometry=-|-, pos1=0.3, pos2=.5]{Adafruit TCS}{Robot}
+				\umlcompo[geometry=-|-, pos1=0.3, pos2=.5]{AStar}{Robot}
+			\end{tikzpicture}
+	\end{center}
+	
+\end{document}
