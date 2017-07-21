@@ -40,7 +40,7 @@ For robotics enthusiasts that find enjoyment in watching robots trace through ph
 
 [UML Diagram](https://github.com/Roxbys/Cop-4331/blob/master/DesignDocuments/UML_Diagram.pdf "UML Diagram")
 
-[Use Case Diagram](https://www.google.com "update me")
+[Use Case Diagram](https://github.com/Roxbys/Cop-4331/blob/master/DesignDocuments/Use%20Case%20Diagram.pdf "Use Case Diagram")
 
 <h2>Test</h2>
 
