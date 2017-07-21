@@ -75,7 +75,7 @@
   </tr>
   
  <tr>
-      <td>5</td><td>1</td><td>3</td><td>As a user, I want my device to make sounds in celebration of its accomplishments</td><td>Buzzer with midi input</td><td>Not Started</td>
+      <td>5</td><td>1</td><td>3</td><td>As a user, I want my device to make sounds in celebration of its accomplishments</td><td>Buzzer with midi input</td><td>Completed</td>
   </tr>
 
   
