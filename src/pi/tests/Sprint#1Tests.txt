@@ -22,7 +22,7 @@ Test: Created test functions to run solely on the arduino hardware that checks w
 
 6. As a user, I want my device to be able to make sounds so it can celebrate its accomplishments. 
 
-Test: Create a method that implements the play sounds method of the arduino slave library.  Verify we can instantiate an object of our Robot class and play a sound through the buzzer on the arduino board.  (completed)
+Test: Create a method that implements the playNotes() method of the arduino slave library.  Verify we can instantiate an object of our Robot class and play a sound through the buzzer on the arduino board.  (completed)
 
 7. As a user, I want my device to be able to reset in case of failure so it doesn't become completely inoperable after executing invalid programs.
 
