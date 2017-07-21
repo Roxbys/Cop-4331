@@ -21,11 +21,11 @@
  </tr>
  
  <tr>
-      <td>1</td><td>15</td><td></td><td>As a user, I want my robot to be able to recognize when it succesfully finishes a maze</td>   <td>Backtracking algorithm</td>
+      <td>1</td><td>15</td><td>As a user, I want my robot to be able to recognize when it succesfully finishes a maze</td><td>Backtracking algorithm</td><td>Completed</td>
  </tr>
  
  <tr>
- <td>2</td><td>20</td><td>As a user, I want my robot to be able to detect cycles in the maze</td><td>Dead-reckoning system</td><td>Not Completed</td>
+     <td>2</td><td>20</td><td>As a user, I want my robot to be able to detect cycles in the maze</td><td>Dead-reckoning system</td><td>Not Completed</td>
  </tr>
 
  <tr>
