@@ -38,7 +38,7 @@ For robotics enthusiasts that find enjoyment in watching robots trace through ph
 
 <h2>Design Documents</h2>
 
-[UML Diagram](https://github.com/Roxbys/Cop-4331/blob/master/DesignDocuments/UML_Diagram.pdf "UML Diagram")
+[UML Diagram](https://github.com/Roxbys/Cop-4331/blob/master/DesignDocuments/umldiagram.pdf "UML Diagram")
 
 [Use Case Diagram](https://github.com/Roxbys/Cop-4331/blob/master/DesignDocuments/Use%20Case%20Diagram.pdf "Use Case Diagram")
 
